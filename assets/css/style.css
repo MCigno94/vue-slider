@@ -48,6 +48,10 @@ img {
     object-fit: cover;
 }
 
+.slider {
+    filter: brightness(0.5);
+}
+
 .description-image {
     position: absolute;
     bottom: 1rem;

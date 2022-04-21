@@ -48,5 +48,21 @@ const app = new Vue({
             }
         ]
     },
-    methods: {}
+    methods: {
+        upImage() {
+            console.log('up image');
+            if (this.activeImage === 0) {
+                this.activeImage = this.landscapes.length
+            }
+            this.activeImage--;
+        },
+        downImage() {
+            console.log('down image');
+            this.activeImage++;
+            if (this.activeImage === this.landscapes.length) {
+                this.activeImage = 0;
+            }
+        },
+
+    }
 })
