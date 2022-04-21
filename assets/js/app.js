@@ -50,19 +50,30 @@ const app = new Vue({
     },
     methods: {
         upImage() {
-            console.log('up image');
+            //console.log('up image');
             if (this.activeImage === 0) {
                 this.activeImage = this.landscapes.length
             }
             this.activeImage--;
         },
+
         downImage() {
-            console.log('down image');
+            //console.log('down image');
             this.activeImage++;
             if (this.activeImage === this.landscapes.length) {
                 this.activeImage = 0;
             }
         },
-
+        selectImage() {
+            console.log('select this');
+            this.activeImage = 3;
+        },
+        autoplay() {
+            setInterval(function() {
+                this.activeImage = 3;
+                console.log('ciao');
+            }, 1000)
+        }
     }
+
 })
