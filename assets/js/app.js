@@ -64,16 +64,14 @@ const app = new Vue({
                 this.activeImage = 0;
             }
         },
-        selectImage() {
-            console.log('select this');
-            this.activeImage = 3;
-        },
+
         autoplay() {
-            setInterval(function() {
-                this.activeImage = 3;
-                console.log('ciao');
-            }, 1000)
+            setInterval(this.downImage, 3000)
         }
+
+    },
+    mounted: function() {
+        this.autoplay()
     }
 
-})
+});

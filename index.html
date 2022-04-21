@@ -34,7 +34,7 @@
                 <!-- /.jumbo-sx -->
 
                 <div class="jumbo-dx">
-                    <img :src="landscapes[index].image" v-for="(image, index) in landscapes" class="slider" :class="activeImage === index ? 'none' : ''" @click="selectImage" :alt="'City: ' + landscapes[index].title">
+                    <img :src="landscapes[index].image" v-for="(image, index) in landscapes" class="slider" :class="activeImage === index ? 'none' : ''" @click="activeImage = index" :alt="'City: ' + landscapes[index].title">
                     <div class="navigation">
                         <div class="up" @click="upImage">
                             <i class="fa fa-chevron-up"></i>
