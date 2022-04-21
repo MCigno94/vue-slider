@@ -24,21 +24,17 @@
 
             <div class="jumbotrone">
                 <div class="jumbo-sx">
-                    <img src="./img/01.jpg" alt="Svezia" class="image">
+                    <img :src="landscapes[activeImage].image" :alt="'City: ' + landscapes[activeImage].title" class="image">
                     <div class="description-image">
-                        <h2>Svezia</h2>
-                        <p>Lorem ipsum dolor sit amet.</p>
+                        <h2>{{landscapes[activeImage].title}}</h2>
+                        <p>{{landscapes[activeImage].text}}</p>
                     </div>
                     <!-- /.description-image -->
                 </div>
                 <!-- /.jumbo-sx -->
 
                 <div class="jumbo-dx">
-                    <img src="./img/02.jpg" alt="" class="slider">
-                    <img src="./img/02.jpg" alt="" class="slider">
-                    <img src="./img/02.jpg" alt="" class="slider">
-                    <img src="./img/02.jpg" alt="" class="slider">
-                    <img src="./img/02.jpg" alt="" class="slider">
+                    <img :src="landscapes[index].image" v-for="(image, index) in landscapes" class="slider" :alt="'City: ' + landscapes[index].title">
                     <div class="navigation">
                         <div class="up">
                             <i class="fa fa-chevron-up"></i>

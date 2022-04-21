@@ -17,7 +17,7 @@ img {
 
 .jumbotrone {
     width: 100%;
-    height: 60vh;
+    height: 40vh;
     margin: auto;
     position: relative;
     display: flex;
@@ -44,8 +44,7 @@ img {
 }
 
 .jumbo-dx>img {
-    width: 100%;
-    height: 100%;
+    height: calc(100% / 5);
     object-fit: cover;
 }
 
