@@ -22,7 +22,7 @@
 
         <div class="container">
 
-            <div class="jumbotrone">
+            <div class="jumbotrone" @mouseover="stopAutoplay" @mouseout="autoplay">
                 <div class="jumbo-sx">
                     <img :src="landscapes[activeImage].image" :alt="'City: ' + landscapes[activeImage].title" class="image">
                     <div class="description-image">

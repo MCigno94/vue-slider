@@ -20,6 +20,7 @@ Bonus:
 const app = new Vue({
     el: '#app',
     data: {
+        idAutoplay: null,
         activeImage: 0,
         landscapes: [{
                 image: './img/01.jpg',
@@ -66,7 +67,11 @@ const app = new Vue({
         },
 
         autoplay() {
-            setInterval(this.downImage, 3000)
+            this.idAutoplay = setInterval(this.downImage, 3000)
+        },
+
+        stopAutoplay() {
+            clearInterval(this.idAutoplay)
         }
 
     },
